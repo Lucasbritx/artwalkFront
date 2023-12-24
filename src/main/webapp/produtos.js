@@ -13,13 +13,12 @@ $(document).ready(function () {
     url: "http://localhost:8080/trabalhoartwalk/resources/produtos",
     method: "GET",
     success: function (response) {
-      $("#lista-produtos").DataTable({
+      const tabela = $("#lista-produtos").DataTable({
         data: response,
         language: {
           url: "//cdn.datatables.net/plug-ins/1.10.25/i18n/Portuguese-Brasil.json",
         },
         paging: false,
-        filter: false,
         info: false,
         columns: [
           { data: "id" },
@@ -44,6 +43,12 @@ $(document).ready(function () {
           },
         ],
       });
+      $('#customSearchProductsButton').on('click', function() {
+        console.log('oiii');
+        console.log($('#customSearchProductsInput').val());
+        tabela.search($('#customSearchProductsInput').val()).draw();
+      });
     },
   });
+
 });

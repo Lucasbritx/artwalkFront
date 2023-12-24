@@ -1,6 +1,6 @@
 const deletePedido = (numero) => {
   $.ajax({
-    url: `http://localhost:8080/trabalhoartwalk/resources/usuarios/${numero}`,
+    url: `http://localhost:8080/trabalhoartwalk/resources/pedidos/${numero}`,
     method: "DELETE",
     success: function (response) {
       window.alert("Pedido excluído com sucesso!");

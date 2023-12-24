@@ -5,3 +5,7 @@ html, body {
 .laranja {
   color: #ff4f00;
 }
+
+#lista-produtos_filter {
+  display: none;
+}
