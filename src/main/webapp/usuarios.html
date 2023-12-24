@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Usuarios</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
@@ -15,6 +15,7 @@
     />
     <script src="https://cdn.datatables.net/v/bs5/dt-1.13.8/datatables.min.js"></script>
     <link rel="stylesheet" href="index.css" />
+    <script src="usuarios.js"></script>
   </head>
   <body>
     <div
@@ -64,7 +65,7 @@
         <div class="flex gap-4">
           <a
             href="index.html"
-            class="text-orange-500 font-bold flex justify-center gap-2"
+            class="text-white hover:text-orange-500 hover:font-bold flex justify-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +127,7 @@
           </a>
           <a
             href="usuarios.html"
-            class="text-white hover:text-orange-500 hover:font-bold flex justify-center gap-2"
+            class="text-orange-500 font-bold flex justify-center gap-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -168,51 +169,22 @@
       </div>
     </div>
     <div
-      class="w-full h-full px-8 py-3 bg-[#222] text-white font-['Arial'] text-justify flex gap-4"
+      class="w-full h-full px-8 py-3 bg-[#222] text-white font-['Arial'] text-justify flex gap-4 justify-center"
     >
-      <div>
-        <h1 class="text-orange-500 font-bold text-xl font-['Arial']">
-          Sobre nós
-        </h1>
-        <div class="flex flex-col gap-4 text-[12pt]">
-          <p>
-            Nascemos há 16 anos com foco no mercado de lifestyle urbano. Somos
-            apaixonados por sneakers e contamos com as melhores marcas e
-            parceiros, oferecendo sempre produtos com a mais alta qualidade,
-            visando trazer exclusividade para os sneakerheads, aqueles que assim
-            como nós são fissurados em sneakers.
-          </p>
-          <p>
-            Somos os principais parceiros estratégicos dos players globais:
-            Nike, Jordan Brand, adidas, Vans, Puma e com isso, além da enorme
-            responsabilidade em elevar e democratizar a cultura sneaker no
-            Brasil, trazemos sempre em primeira mão todos os lançamentos
-            globais, produtos exclusivos, com a mais alta tecnologia e
-            qualidade.
-          </p>
-          <p class="laranja">
-            Para proporcionar mais inovação, comodidade e uma experiência de
-            compra cada vez melhor, oferecemos aos nossos consumidores, um
-            sistema de compra omnichannel, com estoques das lojas físicas e
-            online integrados, rompendo assim todas as barreiras de acesso de
-            nossos clientes ao seu desejo de compra em qualquer momento/lugar.
-          </p>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2">
-        <img
-          class="object-cover max-w-80"
-          loading="lazy"
-          src="https://artwalk.vteximg.com.br/arquivos/banner-principal-desk-quemSomos.jpg?v=638035228863530000"
-          alt="Nossas lojas"
-        />
-        <img
-          class="object-cover max-w-80"
-          loading="lazy"
-          src="https://artwalk.vteximg.com.br/arquivos/banner-principal-desk2-quemSomos.jpg?v=638037039803530000"
-          alt="Nossas lojas"
-        />
-      </div>
+      <table id="lista-usuarios">
+        <thead>
+          <tr>
+            <th>Cpf</th>
+            <th>Nome</th>
+            <th>Data de nascimento</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Whats</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
   </body>
 </html>
